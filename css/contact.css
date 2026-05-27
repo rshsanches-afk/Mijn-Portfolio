@@ -1,0 +1,87 @@
+/* Contact Sectie Updates */
+.contact {
+    min-height: 100vh;
+    padding-top: 80px;
+}
+.contact-layout {
+    display: flex;
+    gap: 4rem;
+    flex-wrap: wrap;
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-card {
+    border-left: none;
+    border-bottom: 5px solid var(--primary-color);
+    padding: 1.5rem;
+}
+
+.social-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    margin: 0 0.5rem;
+    transition: var(--transition);
+}
+
+.social-link:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
+.contact-form-container {
+    flex: 1.5;
+    min-width: 300px;
+    background-color: var(--bg-white);
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(34, 139, 34, 0.05);
+}
+
+.contact-form h3 {
+    color: var(--primary-dark);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--primary-dark);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid #c8e6c9;
+    border-radius: 8px;
+    font-family: var(--font-main);
+    font-size: 1rem;
+    transition: var(--transition);
+    background-color: var(--bg-light);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(34, 139, 34, 0.1);
+}
+
+.btn-submit {
+    width: 100%;
+    cursor: pointer;
+}

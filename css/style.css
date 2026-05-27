@@ -1,0 +1,53 @@
+/* Dit is het CSS bestand. Hiermee bepalen we hoe de website eruitziet. (Kleuren, lettertypes, afstand) */
+
+/* 'body' is de hele pagina */
+body {
+    font-family: Arial, sans-serif; /* Een makkelijk leesbaar lettertype */
+    margin: 0; /* Haalt de standaard witruimte rond de randen weg */
+    padding: 0;
+    background-color: #f4f4f4; /* Een lichtgrijze achtergrondkleur */
+    color: #333; /* Donkergrijze tekstkleur (beter leesbaar dan puur zwart) */
+}
+
+/* Het menu bord bovenaan (navigatie) */
+nav {
+    background-color: #007BFF; /* Mooie blauwe kleur voor het menu */
+    padding: 15px; /* Voegt ruimte toe aan de binnenkant van het menu (boven en onder) */
+    text-align: center; /* Zet de links in het midden */
+}
+
+/* De knoppen/links in het menu */
+nav a {
+    color: white; /* Tekstkleur van de link is wit */
+    text-decoration: none; /* Haalt het standaard streepje onder de link weg */
+    margin: 0 15px; /* Creëert ruimte tussen de verschillende knoppen */
+    font-size: 18px; /* Maakt de tekst iets groter */
+    font-weight: bold; /* Maakt de letters dikgedrukt */
+}
+
+/* Wat er gebeurt als je met de muis over een link (knop) gaat */
+nav a:hover {
+    color: #FFD700; /* Verandert de tekstkleur in goud/geel bij een hover */
+}
+
+/* Een kader (doos) waar we alle tekst van de pagina inzetten, zodat het netjes in het midden staat */
+.container {
+    max-width: 800px; /* De tekst wordt nóóit breder dan 800 pixels */
+    margin: 40px auto; /* 'auto' zorgt ervoor dat kader in het midden van het scherm staat */
+    background-color: white; /* Geeft het kader een witte achtergrond */
+    padding: 30px; /* Ruimte aan de binnenkant rondom de tekst */
+    border-radius: 10px; /* Maakt de hoekjes van het witte kader mooi rond */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Voegt een lichte, chique schaduw toe achter het kader */
+}
+
+/* Stijl speciaal voor de opmaak van onze takenlijst */
+ul {
+    list-style-type: square; /* Laat vierkantjes zien in plaats van de standaard rondjes voor de lijst */
+    padding-left: 20px;
+}
+
+/* Stijl voor Elk individueel taakje (list element) */
+li {
+    margin-bottom: 12px; /* Ruimte tussen de taken in de lijst */
+    font-size: 16px;
+}

@@ -1,0 +1,326 @@
+:root {
+    --primary-color: #228B22; /* Forest Green */
+    --primary-dark: #165c16;  /* Donkerdere tint voor contrast */
+    --accent-color: #4CAF50;  /* Lichte groen voor accenten */
+    --bg-light: #F9FAF9;      /* Zachte lichte achtergrond */
+    --bg-white: #FFFFFF;
+    --text-dark: #1a2e1a;     /* Zeer donker groen (bijna zwart) voor tekst */
+    --text-light: #ffffff;
+    --font-main: 'Inter', sans-serif;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--text-dark);
+    background-color: var(--bg-light);
+    line-height: 1.6;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Typografie */
+h1, h2, h3 {
+    font-weight: 700;
+}
+
+.highlight {
+    color: var(--primary-color);
+}
+
+.section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--primary-dark);
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+}
+
+/* Navigatiebalk */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    box-shadow: 0 2px 15px rgba(34, 139, 34, 0.1); /* Forest green glow */
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+    letter-spacing: -1px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-dark);
+    margin-left: 2rem;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.highlight-link {
+    color: var(--primary-color) !important;
+    font-weight: bold !important;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.nav-links .btn-terug {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+}
+
+.nav-links .btn-terug:hover {
+    background-color: var(--primary-dark);
+    color: var(--text-light);
+}
+
+/* Hero Sectie */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+    /* Subtiel groen patroon of gradient voor een strakke look */
+    background: linear-gradient(135deg, #f0f7f0 0%, #d5ebd5 100%);
+    padding-top: 80px; 
+}
+
+.hero-content {
+    max-width: 50%;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+.hero-content h2 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: #445944; /* Grijzig groen */
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: var(--transition);
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 4px 15px rgba(34, 139, 34, 0.3);
+}
+
+.btn:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+    box-shadow: none;
+}
+
+/* Hero Afbeelding */
+.hero-image {
+    max-width: 45%;
+    display: flex;
+    justify-content: center;
+}
+
+.image-wrapper {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    padding: 8px;
+    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+    animation: float 6s ease-in-out infinite;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid var(--bg-white);
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Sectie Containers */
+.section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+}
+
+/* Over Mij Sectie */
+.about {
+    background-color: var(--bg-white);
+}
+
+.about-content {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+}
+
+.about-text {
+    flex: 1.2;
+    font-size: 1.1rem;
+    color: #334233;
+}
+
+.about-text p {
+    margin-bottom: 1.5rem;
+}
+
+.about-stats {
+    flex: 0.8;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.stat-card {
+    background-color: var(--bg-light);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(34, 139, 34, 0.05);
+    border-left: 5px solid var(--primary-color);
+    transition: var(--transition);
+}
+
+.stat-card:hover {
+    transform: translateX(10px);
+    box-shadow: 0 15px 40px rgba(34, 139, 34, 0.1);
+}
+
+.stat-card h3 {
+    color: var(--primary-dark);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Skills Sectie */
+.skills {
+    background-color: #f4fcf4; /* Een hele lichte groene tint voor afwisseling */
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.skill-card {
+    background-color: var(--bg-white);
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    color: var(--primary-dark);
+    box-shadow: 0 4px 15px rgba(34, 139, 34, 0.08);
+    transition: var(--transition);
+    border: 2px solid transparent;
+}
+
+.skill-card:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-5px);
+    color: var(--primary-color);
+}
+
+
+
+/* Footer */
+footer {
+    background-color: var(--primary-dark);
+    color: var(--bg-light);
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+}
+
+/* Responsief Ontwerp (Voor mobieltjes) */
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 120px;
+    }
+    
+    .hero-content {
+        max-width: 100%;
+        margin-bottom: 3rem;
+    }
+    
+    .hero-image {
+        max-width: 100%;
+    }
+    
+    .image-wrapper {
+        width: 280px;
+        height: 280px;
+    }
+    
+    .about-content {
+        flex-direction: column;
+    }
+    
+    .nav-links {
+        display: none; /* Normaal verbergen we dit op mobiel achter een knop */
+    }
+}
