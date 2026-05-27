@@ -27,7 +27,7 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Typografie */
+
 h1, h2, h3 {
     font-weight: 700;
 }
@@ -56,7 +56,7 @@ h1, h2, h3 {
     border-radius: 2px;
 }
 
-/* Navigatiebalk */
+
 .navbar {
     position: fixed;
     top: 0;
@@ -108,14 +108,14 @@ h1, h2, h3 {
     color: var(--text-light);
 }
 
-/* Hero Sectie */
+
 .hero {
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 10%;
-    /* Subtiel groen patroon of gradient voor een strakke look */
+    
     background: linear-gradient(135deg, #f0f7f0 0%, #d5ebd5 100%);
     padding-top: 80px; 
 }
@@ -163,7 +163,7 @@ h1, h2, h3 {
     box-shadow: none;
 }
 
-/* Hero Afbeelding */
+
 .hero-image {
     max-width: 45%;
     display: flex;
@@ -194,7 +194,7 @@ h1, h2, h3 {
     100% { transform: translateY(0px); }
 }
 
-/* Sectie Containers */
+
 .section-container {
     max-width: 1200px;
     margin: 0 auto;
